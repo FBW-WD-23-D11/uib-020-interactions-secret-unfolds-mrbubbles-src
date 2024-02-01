@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message {
+    /* border: 2px solid yellowgreen; */
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    align-self: center;
+    position: fixed;
+    transition: 1.5s ease-in-out;
+}
+.box {
+    width: 250px;
+    height: 250px;
+    transition: 1s ease-in-out;
+}
+.top-left {
+    background-color: steelblue;
+    position: relative;
+    top: 0;
+    left: 250px;
+}
+.bot-left {
+    background-color: yellow;
+    position: relative;
+    top: 250px;
+    left: 0;
+}
+.bot-right {
+    background-color: dimgray;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.top-right {
+    background-color: rosybrown;
+    position: relative;
+    top: 250px;
+    right: 250px;
+}
+.message:hover .top-left {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+}
+.message:hover .bot-left {
+    position: relative;
+    top: 250px;
+    left: -250px;
+    transform: rotate(-90deg);
+}
+.message:hover .bot-right {
+    position: relative;
+    top: 0px;
+    left: 250px;
+    transform: rotate(-90deg);
+}
+.message:hover .top-right {
+    position: relative;
+    top: 250px;
+    right: 0;
+    transform: rotate(90deg);
+}
+.message:hover h1 {
+    transform: scale(2);
+    text-shadow: 2px 2px 5px red;
+}
